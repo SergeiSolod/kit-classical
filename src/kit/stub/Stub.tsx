@@ -1,9 +1,10 @@
 import { FC, useEffect, useState } from "react";
-import { languages } from "helpers/const";
-import styles from "./StubMobile.module.scss";
-import Languages from "kit/Languages/Languages";
+import { languages } from "src/helpers/const";
+import styles from "./Stub.module.scss";
+import Languages from "src/kit/languages/Languages";
 
 interface StubMobileProps {
+  show?: boolean;
   maxWidth?: number;
   title?: string;
   text?: string;
@@ -12,6 +13,7 @@ interface StubMobileProps {
 }
 
 const StubMobile: FC<StubMobileProps> = ({
+  show,
   maxWidth,
   title,
   text,
@@ -41,7 +43,7 @@ const StubMobile: FC<StubMobileProps> = ({
 
   return (
     <>
-      {media && (
+      {(show || media) && (
         <>
           <div className={styles.background} />
           <div className={styles.wrapper}>

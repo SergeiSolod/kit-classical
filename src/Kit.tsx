@@ -17,6 +17,7 @@ import GraphsPage from "src/components/GraphsPage";
 import CalendarsPage from "src/components/CalendarsPage";
 import NavigationPage from "src/components/NavigationPage";
 import DropPage from "src/components/DropPage";
+import StubPage from "src/components/StubPage";
 import localized from "src/helpers/localized";
 import { CSSTransition, SwitchTransition } from "react-transition-group";
 
@@ -47,6 +48,7 @@ const Kit: FC = () => {
           "calendars",
           "drop",
           "navigation",
+          "stub",
         ]}
         page={page}
         setPage={setPage}
@@ -85,6 +87,8 @@ const Kit: FC = () => {
             <DropPage />
           ) : page === "navigation" ? (
             <NavigationPage />
+          ) : page === "stub" ? (
+            <StubPage />
           ) : (
             <div />
           )}

@@ -18,23 +18,24 @@ This is a Ui kit project that stores all the components necessary for a React.js
 
 List of ready components:
 
-1) inputs
-2) textarea
-3) buttons
-4) selects
-5) preloader
-6) accordion
-7) messages
-8) modal
-9) pagination
-10) switch
-11) popup
-12) languages
-13) tables
-14) graphics
-15) calendars
-16) drop
-17) navigation
+1. inputs
+2. textarea
+3. buttons
+4. selects
+5. preloader
+6. accordion
+7. messages
+8. modal
+9. pagination
+10. switch
+11. popup
+12. languages
+13. tables
+14. graphics
+15. calendars
+16. drop
+17. navigation
+18. stub
 
 To use these components, simply copy the kit folder, styles and fonts into your project. You can easily change any kit element in the kit folder in your project. All kit elements are made in a strict classic black and white design
 
@@ -45,5 +46,3 @@ The project is made on nodejs v21.6.1, yarn v1.22.21, any current version will d
 ### Stack
 
 TypeScript, React, Redux, Saas, HTML5, Vite
-
-
