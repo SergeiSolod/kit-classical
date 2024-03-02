@@ -3,7 +3,7 @@ import { languages } from "src/helpers/const";
 import styles from "./Stub.module.scss";
 import Languages from "src/kit/languages/Languages";
 
-interface StubMobileProps {
+interface StubProps {
   show?: boolean;
   maxWidth?: number;
   title?: string;
@@ -12,7 +12,7 @@ interface StubMobileProps {
   changeLanguage?: () => void;
 }
 
-const StubMobile: FC<StubMobileProps> = ({
+const Stub: FC<StubProps> = ({
   show,
   maxWidth,
   title,
@@ -63,4 +63,4 @@ const StubMobile: FC<StubMobileProps> = ({
   );
 };
 
-export default StubMobile;
+export default Stub;
