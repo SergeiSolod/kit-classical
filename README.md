@@ -12,6 +12,8 @@
 
 ### About the project
 
+https://youtu.be/qVP6eoAaXS0 video demonstration of the project
+
 You can view all components here: http://kit-classical.vercel.app/
 
 This is a Ui kit project that stores all the components necessary for a React.js Frontend developer.
