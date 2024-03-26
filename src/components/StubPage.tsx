@@ -1,7 +1,6 @@
 import { FC, useState } from "react";
+import { Stub, Button } from "src/kit";
 import styles from "../Kit.module.scss";
-import Stub from "src/kit/stub/Stub";
-import Button from "src/kit/button/Button";
 import localized from "src/helpers/localized";
 
 const StubPage: FC = () => {

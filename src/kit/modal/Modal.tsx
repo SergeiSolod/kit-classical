@@ -1,7 +1,7 @@
 import { FC } from "react";
-import Button from "../button/Button";
-import styles from "./Modal.module.scss";
+import { Button } from "../index";
 import { CSSTransition } from "react-transition-group";
+import styles from "./Modal.module.scss";
 
 interface ModalProps {
   show?: boolean;

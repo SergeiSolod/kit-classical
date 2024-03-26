@@ -1,11 +1,11 @@
 import { FC, useState } from "react";
-import styles from "../Kit.module.scss";
-import Input from "src/kit/input/Input";
+import { Input } from "src/kit";
 import {
   validateEmail,
   validatePassword,
   validatePhone,
 } from "src/helpers/validators";
+import styles from "../Kit.module.scss";
 
 const InputsPage: FC = () => {
   const [textarea, setTextarea] = useState("");

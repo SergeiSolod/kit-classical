@@ -1,7 +1,7 @@
 import { FC, useEffect, useState } from "react";
 import { languages } from "src/helpers/const";
+import { Languages } from "../index";
 import styles from "./Stub.module.scss";
-import Languages from "src/kit/languages/Languages";
 
 interface StubProps {
   show?: boolean;

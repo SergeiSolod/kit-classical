@@ -1,7 +1,6 @@
 import { FC, useState } from "react";
+import { Modal, Button } from "src/kit";
 import styles from "../Kit.module.scss";
-import Modal from "src/kit/modal/Modal";
-import Button from "src/kit/button/Button";
 
 const ModalPage: FC = () => {
   const [modal, setModal] = useState(false);

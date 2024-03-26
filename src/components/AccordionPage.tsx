@@ -1,6 +1,6 @@
 import { FC, useState } from "react";
+import { Accordion } from "src/kit";
 import styles from "../Kit.module.scss";
-import Accordion from "src/kit/accordion/Accordion";
 
 const AccordionPage: FC = () => {
   const [selectedId, setSelectedId] = useState(null);

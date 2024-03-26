@@ -1,11 +1,13 @@
 import { FC } from "react";
+import {
+  StackedBarChart,
+  VerticalBarChart,
+  AreaChart,
+  MultitypeBarChart,
+  CircleChart,
+} from "src/kit";
 import styles from "../Kit.module.scss";
 import faker from "faker";
-import StackedBarChart from "src/kit/charts/StackedBarChart";
-import VerticalBarChart from "src/kit/charts/VerticalBarChart";
-import AreaChart from "src/kit/charts/AreaChart";
-import MultitypeBarChart from "src/kit/charts/MultitypeBarChart";
-import CircleChart from "src/kit/charts/CircleChart";
 
 // if you need fake data use faker@5.5.3
 

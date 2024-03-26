@@ -1,6 +1,6 @@
 import { FC } from "react";
+import { Button } from "src/kit";
 import styles from "../Kit.module.scss";
-import Button from "src/kit/button/Button";
 
 const ButtonsPage: FC = () => {
   return (

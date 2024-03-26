@@ -1,7 +1,6 @@
 import { FC, useState } from "react";
+import { Preloader, Button } from "src/kit";
 import styles from "../Kit.module.scss";
-import Preloader from "src/kit/preloader/Preloader";
-import Button from "src/kit/button/Button";
 
 const PreloaderPage: FC = () => {
   const [preloader, setPreloader] = useState(false);

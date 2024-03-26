@@ -1,6 +1,6 @@
 import { FC, useState } from "react";
+import { Select } from "src/kit";
 import styles from "../Kit.module.scss";
-import Select from "src/kit/select/Select";
 
 const SelectsPage: FC = () => {
   const [array, setArray] = useState(null);

@@ -1,6 +1,6 @@
 import { FC, useState } from "react";
+import { Navigation } from "src/kit";
 import styles from "../Kit.module.scss";
-import Navigation from "src/kit/navigation/Navigation";
 
 const NavigationPage: FC = () => {
   const [page, setPage] = useState("inputs");

@@ -1,7 +1,6 @@
 import { FC, useState } from "react";
+import { Table, Popup } from "src/kit";
 import styles from "../Kit.module.scss";
-import Table from "src/kit/table/Table";
-import Popup from "src/kit/popup/Popup";
 import localized from "src/helpers/localized";
 
 const TablesPage: FC = () => {

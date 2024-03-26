@@ -1,7 +1,7 @@
 import { FC, useState } from "react";
 import { languages } from "src/helpers/const";
+import { Languages } from "src/kit";
 import styles from "../Kit.module.scss";
-import Languages from "src/kit/languages/Languages";
 import localized from "src/helpers/localized";
 
 const LanguagesPage: FC = () => {

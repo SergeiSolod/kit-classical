@@ -1,7 +1,6 @@
 import { FC, useState, useRef } from "react";
+import { Drop, Button } from "src/kit";
 import styles from "../Kit.module.scss";
-import Drop from "src/kit/drop/Drop";
-import Button from "src/kit/button/Button";
 
 const DropPage: FC = () => {
   const [file, setFile] = useState(null);

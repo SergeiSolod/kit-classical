@@ -1,6 +1,6 @@
 import { FC, useState } from "react";
+import { Pagination } from "src/kit";
 import styles from "../Kit.module.scss";
-import Pagination from "src/kit/pagination/Pagination";
 
 const PaginationPage: FC = () => {
   const [page, setPage] = useState(1);

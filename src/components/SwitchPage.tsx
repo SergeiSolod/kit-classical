@@ -1,6 +1,6 @@
 import { FC, useState } from "react";
+import { Switch } from "src/kit";
 import styles from "../Kit.module.scss";
-import Switch from "src/kit/switch/Switch";
 
 const SwitchPage: FC = () => {
   const [status, setStatus] = useState(false);

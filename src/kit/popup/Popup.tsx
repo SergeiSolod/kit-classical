@@ -1,6 +1,6 @@
 import { FC } from "react";
-import styles from "./Popup.module.scss";
 import { CSSTransition } from "react-transition-group";
+import styles from "./Popup.module.scss";
 
 interface PopupProps {
   id?: string;

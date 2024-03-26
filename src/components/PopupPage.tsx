@@ -1,7 +1,6 @@
 import { FC, useState } from "react";
+import { Popup, Button } from "src/kit";
 import styles from "../Kit.module.scss";
-import Popup from "src/kit/popup/Popup";
-import Button from "src/kit/button/Button";
 
 const PopupPage: FC = () => {
   const [show, setShow] = useState(false);

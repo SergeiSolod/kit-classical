@@ -1,6 +1,6 @@
 import { FC, useState } from "react";
+import { Calendar } from "src/kit";
 import styles from "../Kit.module.scss";
-import Calendar from "src/kit/calendar/Calendar";
 
 const CalendarsPage: FC = () => {
   const [dateFrom, setDateFrom] = useState("");
