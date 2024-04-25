@@ -23,7 +23,7 @@ interface InputProps {
   style?: any;
 }
 
-const Input: FC<InputProps> = ({
+let Input: FC<InputProps> = ({
   id = "",
   value = "",
   label = "",
@@ -38,7 +38,7 @@ const Input: FC<InputProps> = ({
   length = 600,
   style = "",
 }) => {
-  const {
+  let {
     email,
     onChange: handleEmailChange,
     bind,
@@ -56,17 +56,17 @@ const Input: FC<InputProps> = ({
     ],
   });
 
-  const handleChange = (e) => {
+  let handleChange = (e) => {
     handleEmailChange(e);
     if (email.address?.trim().length <= length) onChange(email.address?.trim());
   };
 
-  const textareaRef = useRef(null);
+  let textareaRef = useRef(null);
 
   useEffect(() => {
     if (type === "textarea") {
       textareaRef.current.style.height = "0px";
-      const scrollHeight = textareaRef.current.scrollHeight;
+      let scrollHeight = textareaRef.current.scrollHeight;
       textareaRef.current.style.height = scrollHeight + "px";
     }
   }, [value]);
@@ -123,7 +123,7 @@ const Input: FC<InputProps> = ({
           value={value}
           data-empty={Boolean(!value)}
           onChange={(e) => {
-            const value = e.target.value;
+            let value = e.target.value;
             if (allowed === "numbers") {
               if (/^[0-9]*$/.test(value) && value.length <= length) {
                 onChange(value);
@@ -147,7 +147,7 @@ const Input: FC<InputProps> = ({
           type={type === "password" ? "password" : ""}
           data-empty={Boolean(!value)}
           onChange={(e) => {
-            const value = e.target.value;
+            let value = e.target.value;
             if (allowed === "numbers") {
               if (/^[0-9]*$/.test(value) && value.length <= length) {
                 onChange(value);

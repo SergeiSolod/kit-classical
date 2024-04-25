@@ -15,7 +15,7 @@ interface TableProps {
   maxValue?: number;
 }
 
-const Table: FC<TableProps> = ({
+let Table: FC<TableProps> = ({
   columns = [],
   rows = [],
   left = false,
@@ -26,7 +26,7 @@ const Table: FC<TableProps> = ({
   colored = false,
   maxValue = 0,
 }) => {
-  const returnColor = (value: number) => {
+  let returnColor = (value: number) => {
     if (colored) {
       if (value <= (maxValue / 10) * 1) {
         return "rgb(0,114,240, 0.1)";
@@ -76,7 +76,7 @@ const Table: FC<TableProps> = ({
         <tbody className={styles.body}>
           {rows?.length
             ? rows?.map((row, index) => {
-                const { id = "" } = row;
+                let { id = "" } = row;
                 return (
                   <tr
                     key={id ? id : index}

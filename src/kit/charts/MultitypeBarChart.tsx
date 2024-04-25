@@ -30,7 +30,7 @@ interface MultitypeBarChartProps {
   title?: string;
 }
 
-const MultitypeBarChart: FC<MultitypeBarChartProps> = ({ data, title }) => {
+let MultitypeBarChart: FC<MultitypeBarChartProps> = ({ data, title }) => {
   return (
     <Chart
       type="bar"

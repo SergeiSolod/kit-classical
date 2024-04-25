@@ -2,22 +2,22 @@ import { FC, useState, useRef } from "react";
 import { Drop, Button } from "src/kit";
 import styles from "../Kit.module.scss";
 
-const DropPage: FC = () => {
-  const [file, setFile] = useState(null);
+let DropPage: FC = () => {
+  let [file, setFile] = useState(null);
 
-  const fileSelected = async (e: any) => {
+  let fileSelected = async (e: any) => {
     if (e.target.files?.length) {
       setFile(e.target.files[0]);
     }
   };
 
-  const fileDragAndDrop = async (file: any) => {
+  let fileDragAndDrop = async (file: any) => {
     if (file) {
       setFile(file);
     }
   };
 
-  const inputFileRef = useRef();
+  let inputFileRef = useRef();
 
   return (
     <div className={styles.block}>

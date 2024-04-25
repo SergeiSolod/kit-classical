@@ -24,7 +24,7 @@ interface VerticalBarChartProps {
   title?: string;
 }
 
-const VerticalBarChart: FC<VerticalBarChartProps> = ({ data, title }) => {
+let VerticalBarChart: FC<VerticalBarChartProps> = ({ data, title }) => {
   return (
     <Bar
       options={{

@@ -18,7 +18,7 @@ interface CalendarProps {
   year?: string;
 }
 
-const Calendar: FC<CalendarProps> = ({
+let Calendar: FC<CalendarProps> = ({
   id = "",
   locale = "",
   value = "",
@@ -29,9 +29,9 @@ const Calendar: FC<CalendarProps> = ({
   month = "Month",
   year = "Year",
 }) => {
-  const [update, setUpdate] = useState(false);
-  const [open, setOpen] = useState(false);
-  const [isOpenClick, setIsOpenClick] = useState(false);
+  let [update, setUpdate] = useState(false);
+  let [open, setOpen] = useState(false);
+  let [isOpenClick, setIsOpenClick] = useState(false);
 
   useEffect(() => {
     if (update) {

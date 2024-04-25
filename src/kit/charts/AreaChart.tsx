@@ -30,7 +30,7 @@ interface AreaChartProps {
   title?: string;
 }
 
-const AreaChart: FC<AreaChartProps> = ({ data, title }) => {
+let AreaChart: FC<AreaChartProps> = ({ data, title }) => {
   return (
     <Line
       options={{

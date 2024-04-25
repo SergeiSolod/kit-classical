@@ -14,7 +14,7 @@ interface ModalProps {
   onAccept?: () => void;
 }
 
-const Modal: FC<ModalProps> = ({
+let Modal: FC<ModalProps> = ({
   show = false,
   subtitle = "",
   title = "",

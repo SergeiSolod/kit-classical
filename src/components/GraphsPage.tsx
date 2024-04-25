@@ -11,8 +11,8 @@ import faker from "faker";
 
 // if you need fake data use faker@5.5.3
 
-const GraphsPage: FC = () => {
-  const labels = [
+let GraphsPage: FC = () => {
+  let labels = [
     "January",
     "February",
     "March",
@@ -27,7 +27,7 @@ const GraphsPage: FC = () => {
     "December",
   ];
 
-  const dataFirst = {
+  let dataFirst = {
     labels,
     datasets: [
       {
@@ -63,7 +63,7 @@ const GraphsPage: FC = () => {
     ],
   };
 
-  const dataSecond = {
+  let dataSecond = {
     labels,
     datasets: [
       {
@@ -74,7 +74,7 @@ const GraphsPage: FC = () => {
     ],
   };
 
-  const dataThird = {
+  let dataThird = {
     labels,
     datasets: [
       {
@@ -87,7 +87,7 @@ const GraphsPage: FC = () => {
     ],
   };
 
-  const dataFourth = {
+  let dataFourth = {
     labels,
     datasets: [
       {
@@ -103,7 +103,7 @@ const GraphsPage: FC = () => {
     ],
   };
 
-  const dataFifth = {
+  let dataFifth = {
     labels,
     datasets: [
       {
@@ -119,7 +119,7 @@ const GraphsPage: FC = () => {
     ],
   };
 
-  const dataSixth = {
+  let dataSixth = {
     labels,
     datasets: [
       {
@@ -146,7 +146,7 @@ const GraphsPage: FC = () => {
     ],
   };
 
-  const dataSeventh = {
+  let dataSeventh = {
     labels,
     datasets: [
       {
@@ -158,7 +158,7 @@ const GraphsPage: FC = () => {
     ],
   };
 
-  const dataEighth = {
+  let dataEighth = {
     labels,
     datasets: [
       {
@@ -171,7 +171,7 @@ const GraphsPage: FC = () => {
     ],
   };
 
-  const dataNinth = {
+  let dataNinth = {
     labels: [
       "Type 1",
       "Type 2",

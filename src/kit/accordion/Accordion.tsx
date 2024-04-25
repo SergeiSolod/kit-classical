@@ -14,7 +14,7 @@ interface AccordionProps {
   hasChildren?: boolean;
 }
 
-const Accordion: FC<AccordionProps> = ({
+let Accordion: FC<AccordionProps> = ({
   id,
   selectedId,
   handleSelectedId,
@@ -24,28 +24,28 @@ const Accordion: FC<AccordionProps> = ({
   isRoot,
   hasChildren,
 }) => {
-  const refItem = useRef(null);
-  const ref = useRef(null);
-  const [open, setOpen] = useState(false);
+  let refItem = useRef(null);
+  let ref = useRef(null);
+  let [open, setOpen] = useState(false);
 
   // height of the animation plate
-  const [heightTitle, setHeightTitle] = useState(103);
+  let [heightTitle, setHeightTitle] = useState(103);
 
   // content height for opening animation
-  const [heightContent, setHeightContent] = useState(103);
+  let [heightContent, setHeightContent] = useState(103);
 
   // content height after opening for closing animation
-  const [heightInitRootContent, setHeightInitRootContent] = useState(103);
+  let [heightInitRootContent, setHeightInitRootContent] = useState(103);
 
   // Protection against doubleclick and flickering opening/closing animation
-  const [stopClick, setStopClick] = useState(false);
+  let [stopClick, setStopClick] = useState(false);
 
   // Height recalculation on resize
-  const [media, setMedia] = useState(0);
+  let [media, setMedia] = useState(0);
 
   useEffect(() => {
     window.addEventListener("resize", () => {
-      const widthWindow = document?.documentElement?.clientWidth;
+      let widthWindow = document?.documentElement?.clientWidth;
       setMedia(Number(widthWindow));
     });
   });
@@ -72,35 +72,35 @@ const Accordion: FC<AccordionProps> = ({
     setStopClick(true);
 
     // Calculate the height of the plate, taking into account the text wrapping
-    const buttonHeight = heightTitle < 103 ? 103 : heightTitle;
+    let buttonHeight = heightTitle < 103 ? 103 : heightTitle;
 
     // If the block is opened, it calculates the height of the content for animation. After 300ms, set the height to auto.
     // "auto" is needed for nested opening of a nested accordion and recalculation of the root
     if (ref?.current && open) {
       ref.current.style.display = "block";
-      const content = ref.current.clientHeight + buttonHeight;
+      let content = ref.current.clientHeight + buttonHeight;
       setHeightContent(content);
       setHeightInitRootContent(content);
 
-      const timeout = setTimeout(() => {
+      let timeout = setTimeout(() => {
         // setHeightContent('auto');
         setStopClick(false);
         clearTimeout(timeout);
       }, 300);
     } else if (ref?.current && !open) {
       setHeightContent(103);
-      const timeout = setTimeout(() => {
+      let timeout = setTimeout(() => {
         setStopClick(false);
         clearTimeout(timeout);
       }, 100);
 
-      const hiddenTimeout = setTimeout(() => {
+      let hiddenTimeout = setTimeout(() => {
         ref.current.style.display = "none";
         clearTimeout(hiddenTimeout);
       }, 200);
     } else {
       setHeightContent(103);
-      const timeout = setTimeout(() => {
+      let timeout = setTimeout(() => {
         setStopClick(false);
         clearTimeout(timeout);
       }, 100);
@@ -125,7 +125,7 @@ const Accordion: FC<AccordionProps> = ({
           }
           setHeightContent(heightInitRootContent);
           if (open) {
-            const timeout = setTimeout(() => {
+            let timeout = setTimeout(() => {
               handleSelectedId(null);
               clearTimeout(timeout);
             }, 100);

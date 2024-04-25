@@ -2,11 +2,12 @@ import { FC, useState } from "react";
 import { Select } from "src/kit";
 import styles from "../Kit.module.scss";
 
-const SelectsPage: FC = () => {
-  const [array, setArray] = useState(null);
-  const [arrayObjects, setArrayObjects] = useState(null);
-  const [multipleArray, setMultipleArray] = useState("");
-  const [multipleArrayObjects, setMultipleArrayObjects] = useState("");
+let SelectsPage: FC = () => {
+  let [array, setArray] = useState(null);
+  let [arrayObjects, setArrayObjects] = useState(null);
+  let [arrayEmpty, setArrayEmpty] = useState("Mark");
+  let [multipleArray, setMultipleArray] = useState("");
+  let [multipleArrayObjects, setMultipleArrayObjects] = useState("");
 
   return (
     <div className={styles.block}>
@@ -20,6 +21,7 @@ const SelectsPage: FC = () => {
           onChange={(value) => {
             setArray(value);
           }}
+          empty
           list={["Mark", "Jhon", "Sara", "Sten"]}
         />
       </div>
@@ -30,6 +32,7 @@ const SelectsPage: FC = () => {
           value={arrayObjects}
           label={"Select"}
           description={"Select array of objects"}
+          empty
           onChange={(value) => {
             setArrayObjects(value);
           }}
@@ -39,6 +42,18 @@ const SelectsPage: FC = () => {
             { name: "Sara" },
             { name: "Sten" },
           ]}
+        />
+      </div>
+
+      <div className={styles.element}>
+        <Select
+          value={arrayEmpty}
+          label={"Select"}
+          description={"Cannot be left blank"}
+          onChange={(value) => {
+            setArrayEmpty(value);
+          }}
+          list={["Mark", "Jhon", "Sara", "Sten"]}
         />
       </div>
 

@@ -1,4 +1,4 @@
-export const DOMAINS = [
+export let DOMAINS = [
   "AAA",
   "AARP",
   "ABARTH",

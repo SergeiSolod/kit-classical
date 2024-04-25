@@ -2,15 +2,15 @@ import { FC, useState } from "react";
 import { Message, Button } from "src/kit";
 import styles from "../Kit.module.scss";
 
-const MessagesPage: FC = () => {
-  const [message, setMessage] = useState(false);
-  const [messageError, setMessageError] = useState(false);
+let MessagesPage: FC = () => {
+  let [message, setMessage] = useState(false);
+  let [messageError, setMessageError] = useState(false);
 
-  const changeMessage = () => {
+  let changeMessage = () => {
     setMessage(!message);
   };
 
-  const changeMessageError = () => {
+  let changeMessageError = () => {
     setMessageError(!messageError);
   };
 

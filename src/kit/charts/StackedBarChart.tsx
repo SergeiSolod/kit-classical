@@ -24,7 +24,7 @@ interface StackedBarChartProps {
   title?: string;
 }
 
-const StackedBarChart: FC<StackedBarChartProps> = ({ data, title }) => {
+let StackedBarChart: FC<StackedBarChartProps> = ({ data, title }) => {
   return (
     <Bar
       options={{

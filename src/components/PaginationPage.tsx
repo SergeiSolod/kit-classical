@@ -2,8 +2,8 @@ import { FC, useState } from "react";
 import { Pagination } from "src/kit";
 import styles from "../Kit.module.scss";
 
-const PaginationPage: FC = () => {
-  const [page, setPage] = useState(1);
+let PaginationPage: FC = () => {
+  let [page, setPage] = useState(1);
 
   return (
     <div className={styles.block}>

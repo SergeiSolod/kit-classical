@@ -2,8 +2,8 @@ import { FC, useState } from "react";
 import { Preloader, Button } from "src/kit";
 import styles from "../Kit.module.scss";
 
-const PreloaderPage: FC = () => {
-  const [preloader, setPreloader] = useState(false);
+let PreloaderPage: FC = () => {
+  let [preloader, setPreloader] = useState(false);
   return (
     <div className={styles.block}>
       <div className={styles.title}>Preloader</div>

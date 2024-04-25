@@ -2,8 +2,8 @@ import { FC, useState } from "react";
 import { Switch } from "src/kit";
 import styles from "../Kit.module.scss";
 
-const SwitchPage: FC = () => {
-  const [status, setStatus] = useState(false);
+let SwitchPage: FC = () => {
+  let [status, setStatus] = useState(false);
 
   return (
     <div className={styles.block}>

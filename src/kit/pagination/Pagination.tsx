@@ -9,20 +9,20 @@ interface PaginationProps {
   onAccept?: () => void;
 }
 
-const Pagination: FC<PaginationProps> = ({
+let Pagination: FC<PaginationProps> = ({
   currentPage = 1,
   lastPage = 0,
   onAccept = () => {},
 }) => {
-  const [inputPage, setInputPage] = useState(currentPage);
+  let [inputPage, setInputPage] = useState(currentPage);
 
-  const changePage = (page) => {
+  let changePage = (page) => {
     setInputPage(page);
     onAccept(page);
   };
 
-  const handleChangePage = (e) => {
-    const value = Number(e.target.value);
+  let handleChangePage = (e) => {
+    let value = Number(e.target.value);
 
     if (isNaN(value) || value === 0) {
       setInputPage(0);
@@ -37,7 +37,7 @@ const Pagination: FC<PaginationProps> = ({
     }
   };
 
-  const blurPage = (e) => {
+  let blurPage = (e) => {
     if (Number(e.target.value) !== Number(currentPage)) {
       if (!e.target.value || e.target.value === 0) {
         changePage(1);
@@ -49,7 +49,7 @@ const Pagination: FC<PaginationProps> = ({
     }
   };
 
-  const changePrevPage = () => {
+  let changePrevPage = () => {
     if (currentPage - 1 > 1) {
       changePage(Number(currentPage - 1));
     } else {
@@ -57,7 +57,7 @@ const Pagination: FC<PaginationProps> = ({
     }
   };
 
-  const changeNextPage = () => {
+  let changeNextPage = () => {
     if (currentPage + 1 < lastPage) {
       changePage(Number(currentPage + 1));
     } else {
@@ -65,7 +65,7 @@ const Pagination: FC<PaginationProps> = ({
     }
   };
 
-  const handleKeyDown = (e) => {
+  let handleKeyDown = (e) => {
     if (e.code === "Enter" || e.code === "NumpadEnter") {
       if (Number(e.target.value) !== Number(currentPage)) {
         if (!e.target.value || e.target.value === 0) {

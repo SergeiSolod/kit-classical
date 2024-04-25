@@ -21,8 +21,8 @@ import StubPage from "src/components/StubPage";
 import localized from "src/helpers/localized";
 import { CSSTransition, SwitchTransition } from "react-transition-group";
 
-const Kit: FC = () => {
-  const [page, setPage] = useState("inputs");
+let Kit: FC = () => {
+  let [page, setPage] = useState("inputs");
 
   useEffect(() => {
     localized.setLanguage("en");

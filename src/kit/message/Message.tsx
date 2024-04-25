@@ -15,7 +15,7 @@ interface MessageProps {
   buttonText?: string;
 }
 
-const Message: FC<MessageProps> = ({
+let Message: FC<MessageProps> = ({
   show = false,
   title = "",
   message = "",

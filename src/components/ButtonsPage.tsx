@@ -2,7 +2,7 @@ import { FC } from "react";
 import { Button } from "src/kit";
 import styles from "../Kit.module.scss";
 
-const ButtonsPage: FC = () => {
+let ButtonsPage: FC = () => {
   return (
     <div className={styles.block}>
       <div className={styles.title}>Buttons</div>

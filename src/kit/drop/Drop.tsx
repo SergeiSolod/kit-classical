@@ -6,10 +6,10 @@ interface DropProps {
   upload?: () => void;
 }
 
-const Drop: FC<DropProps> = ({ upload = () => {} }) => {
-  const [active, setActive] = useState(false);
+let Drop: FC<DropProps> = ({ upload = () => {} }) => {
+  let [active, setActive] = useState(false);
 
-  const ref = useRef(null);
+  let ref = useRef(null);
 
   function preventDefaults(e: any) {
     e.preventDefault();
@@ -25,10 +25,10 @@ const Drop: FC<DropProps> = ({ upload = () => {} }) => {
   }
 
   useEffect(() => {
-    const handleDrop = (e: any) => {
+    let handleDrop = (e: any) => {
       unhighlight();
-      const dt = e.dataTransfer;
-      const files = dt.files;
+      let dt = e.dataTransfer;
+      let files = dt.files;
 
       if (files?.length) {
         upload(files[0]);

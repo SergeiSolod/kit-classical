@@ -14,9 +14,10 @@ interface SelectProps {
   errorMessage?: string;
   source?: string;
   multiple?: boolean;
+  empty?: boolean;
 }
 
-const Select: FC<SelectProps> = ({
+let Select: FC<SelectProps> = ({
   id = "",
   value = "",
   onChange = () => {},
@@ -26,11 +27,12 @@ const Select: FC<SelectProps> = ({
   list = [],
   error = false,
   errorMessage = "",
-  multiple = false,
   source = "",
+  multiple = false,
+  empty = false,
 }) => {
-  const [open, setOpen] = useState(false);
-  const [selectedValue, setSelectedValue] = useState("");
+  let [open, setOpen] = useState(false);
+  let [selectedValue, setSelectedValue] = useState("");
 
   useEffect(() => {
     if (!source) {
@@ -65,7 +67,7 @@ const Select: FC<SelectProps> = ({
             {multiple
               ? value.length
                 ? value.map((item, i) => {
-                    const listItem = source ? item?.[source] : item;
+                    let listItem = source ? item?.[source] : item;
                     if (value.length > 1 && i === 0) {
                       return (
                         <span key={listItem}>
@@ -92,7 +94,7 @@ const Select: FC<SelectProps> = ({
           <div className={styles.search}>
             {list.length &&
               list.map((item, index) => {
-                const listItem = source ? item?.[source] : item;
+                let listItem = source ? item?.[source] : item;
                 return (
                   <p
                     className={clsx(
@@ -102,9 +104,9 @@ const Select: FC<SelectProps> = ({
                         : listItem === selectedValue && styles.active,
                     )}
                     key={listItem}
-                    onClick={(event) => {
+                    onClick={() => {
                       if (multiple) {
-                        const array = [];
+                        let array = [];
                         if (value) {
                           array.push(...value);
                           if (
@@ -125,7 +127,11 @@ const Select: FC<SelectProps> = ({
                         }
                       } else {
                         // object comparison
-                        if (JSON.stringify(value) === JSON.stringify(item)) {
+                        if (
+                          JSON.stringify(value) === JSON.stringify(item) &&
+                          empty
+                        ) {
+                          console.log('1', empty)
                           onChange(null);
                         } else {
                           onChange(item);

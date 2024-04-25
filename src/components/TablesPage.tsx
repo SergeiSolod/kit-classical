@@ -3,11 +3,11 @@ import { Table, Popup } from "src/kit";
 import styles from "../Kit.module.scss";
 import localized from "src/helpers/localized";
 
-const TablesPage: FC = () => {
-  const [openPopup, setOpenPopup] = useState(false);
-  const [activeRow, setActiveRow] = useState({});
+let TablesPage: FC = () => {
+  let [openPopup, setOpenPopup] = useState(false);
+  let [activeRow, setActiveRow] = useState({});
 
-  const openRow = (row: any) => {
+  let openRow = (row: any) => {
     setActiveRow(row);
     setOpenPopup(true);
   };

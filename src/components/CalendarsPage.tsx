@@ -2,9 +2,9 @@ import { FC, useState } from "react";
 import { Calendar } from "src/kit";
 import styles from "../Kit.module.scss";
 
-const CalendarsPage: FC = () => {
-  const [dateFrom, setDateFrom] = useState("");
-  const [dateTo, setDateTo] = useState("");
+let CalendarsPage: FC = () => {
+  let [dateFrom, setDateFrom] = useState("");
+  let [dateTo, setDateTo] = useState("");
   return (
     <div className={styles.block}>
       <div className={styles.title}>Calendars</div>

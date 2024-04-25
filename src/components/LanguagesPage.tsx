@@ -4,10 +4,10 @@ import { Languages } from "src/kit";
 import styles from "../Kit.module.scss";
 import localized from "src/helpers/localized";
 
-const LanguagesPage: FC = () => {
-  const [language, setLanguage] = useState("en");
+let LanguagesPage: FC = () => {
+  let [language, setLanguage] = useState("en");
 
-  const changeLanguage = (code: string) => {
+  let changeLanguage = (code: string) => {
     setLanguage(code);
     localized.setLanguage(code);
   };

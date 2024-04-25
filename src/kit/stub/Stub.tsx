@@ -12,7 +12,7 @@ interface StubProps {
   changeLanguage?: () => void;
 }
 
-const Stub: FC<StubProps> = ({
+let Stub: FC<StubProps> = ({
   show,
   maxWidth,
   title,
@@ -20,10 +20,10 @@ const Stub: FC<StubProps> = ({
   language,
   changeLanguage,
 }) => {
-  const useMedia = (maxWidth: number) => {
-    const widthWindow = document?.documentElement?.clientWidth;
+  let useMedia = (maxWidth: number) => {
+    let widthWindow = document?.documentElement?.clientWidth;
 
-    const [media, setMedia] = useState(false);
+    let [media, setMedia] = useState(false);
 
     useEffect(() => {
       setMedia(Number(widthWindow) < Number(maxWidth));
@@ -31,7 +31,7 @@ const Stub: FC<StubProps> = ({
 
     useEffect(() => {
       window.addEventListener("resize", () => {
-        const widthWindow = document?.documentElement?.clientWidth;
+        let widthWindow = document?.documentElement?.clientWidth;
         setMedia(Number(widthWindow) < Number(maxWidth));
       });
     });
@@ -39,7 +39,7 @@ const Stub: FC<StubProps> = ({
     return media;
   };
 
-  const media = useMedia(maxWidth);
+  let media = useMedia(maxWidth);
 
   return (
     <>

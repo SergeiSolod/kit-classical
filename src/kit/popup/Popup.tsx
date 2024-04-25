@@ -12,7 +12,7 @@ interface PopupProps {
   children?: React.ReactNode;
 }
 
-const Popup: FC<PopupProps> = ({
+let Popup: FC<PopupProps> = ({
   id = "",
   show = false,
   closeText,

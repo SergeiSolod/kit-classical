@@ -2,10 +2,10 @@ import { FC, useState } from "react";
 import { Modal, Button } from "src/kit";
 import styles from "../Kit.module.scss";
 
-const ModalPage: FC = () => {
-  const [modal, setModal] = useState(false);
+let ModalPage: FC = () => {
+  let [modal, setModal] = useState(false);
 
-  const changeMessage = () => {
+  let changeMessage = () => {
     setModal(!modal);
   };
 

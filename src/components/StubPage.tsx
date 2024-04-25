@@ -3,17 +3,17 @@ import { Stub, Button } from "src/kit";
 import styles from "../Kit.module.scss";
 import localized from "src/helpers/localized";
 
-const StubPage: FC = () => {
-  const [open, setOpen] = useState(false);
+let StubPage: FC = () => {
+  let [open, setOpen] = useState(false);
 
-  const [language, setLanguage] = useState("en");
+  let [language, setLanguage] = useState("en");
 
-  const openStub = () => {
+  let openStub = () => {
     setOpen(true);
     setTimeout(() => setOpen(false), 2000);
   };
 
-  const changeLanguage = (code: string) => {
+  let changeLanguage = (code: string) => {
     setLanguage(code);
     localized.setLanguage(code);
   };

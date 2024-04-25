@@ -7,18 +7,18 @@ import {
 } from "src/helpers/validators";
 import styles from "../Kit.module.scss";
 
-const InputsPage: FC = () => {
-  const [textarea, setTextarea] = useState("");
-  const [string, setString] = useState("");
-  const [error, setError] = useState("");
+let InputsPage: FC = () => {
+  let [textarea, setTextarea] = useState("");
+  let [string, setString] = useState("");
+  let [error, setError] = useState("");
 
-  const [phone, setPhone] = useState("");
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
+  let [phone, setPhone] = useState("");
+  let [email, setEmail] = useState("");
+  let [password, setPassword] = useState("");
 
-  const [phoneValid, setPhoneValid] = useState(true);
-  const [emailValid, setEmailValid] = useState(true);
-  const [passwordValid, setPasswordValid] = useState(true);
+  let [phoneValid, setPhoneValid] = useState(true);
+  let [emailValid, setEmailValid] = useState(true);
+  let [passwordValid, setPasswordValid] = useState(true);
 
   return (
     <div className={styles.block}>

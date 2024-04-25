@@ -6,10 +6,7 @@ interface PreloaderProps {
   background?: number;
 }
 
-const Preloader: FC<PreloaderProps> = ({
-  loading = false,
-  background = 0.2,
-}) => {
+let Preloader: FC<PreloaderProps> = ({ loading = false, background = 0.2 }) => {
   return (
     <>
       {loading && (

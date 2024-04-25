@@ -11,7 +11,7 @@ interface SwitchProps {
   locked?: boolean;
 }
 
-const Switch: FC<SwitchProps> = ({
+let Switch: FC<SwitchProps> = ({
   id = "",
   value = false,
   onChange = () => {},
@@ -19,7 +19,7 @@ const Switch: FC<SwitchProps> = ({
   disabled = false,
   locked = false,
 }) => {
-  const switchRef = useRef(null);
+  let switchRef = useRef(null);
 
   return (
     <div className={styles.wrapper}>

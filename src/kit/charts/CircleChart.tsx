@@ -8,7 +8,7 @@ interface CircleChartProps {
   data: any;
   title?: string;
 }
-const CircleChart: FC<CircleChartProps> = ({ data, title }) => {
+let CircleChart: FC<CircleChartProps> = ({ data, title }) => {
   return (
     <Pie
       data={data}

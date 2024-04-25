@@ -2,10 +2,10 @@ import { FC, useState } from "react";
 import { Accordion } from "src/kit";
 import styles from "../Kit.module.scss";
 
-const AccordionPage: FC = () => {
-  const [selectedId, setSelectedId] = useState(null);
+let AccordionPage: FC = () => {
+  let [selectedId, setSelectedId] = useState(null);
 
-  const handleSelectedId = (id: number) => {
+  let handleSelectedId = (id: number) => {
     if (id === selectedId) {
       setSelectedId(null);
     } else {

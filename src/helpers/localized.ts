@@ -1,6 +1,6 @@
 import LocalizedStrings from "react-localization";
 
-const localized = new LocalizedStrings({
+let localized = new LocalizedStrings({
   en: {
     noData: "Нет данных",
     languages: "Languages",

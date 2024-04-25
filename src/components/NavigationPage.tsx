@@ -2,8 +2,8 @@ import { FC, useState } from "react";
 import { Navigation } from "src/kit";
 import styles from "../Kit.module.scss";
 
-const NavigationPage: FC = () => {
-  const [page, setPage] = useState("inputs");
+let NavigationPage: FC = () => {
+  let [page, setPage] = useState("inputs");
 
   return (
     <div className={styles.block}>

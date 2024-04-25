@@ -16,8 +16,8 @@ interface ButtonProps {
   unclickable?: boolean;
 }
 
-const Button: FC<ButtonProps> = (props) => {
-  const {
+let Button: FC<ButtonProps> = (props) => {
+  let {
     id = "button",
     secondary = false,
     disabled = false,

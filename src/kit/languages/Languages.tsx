@@ -7,12 +7,12 @@ interface LanguagesProps {
   changeLanguage?: () => void;
 }
 
-const Languages: FC<LanguagesProps> = ({
+let Languages: FC<LanguagesProps> = ({
   languages,
   language,
   changeLanguage,
 }) => {
-  const [openLang, setOpenLang] = useState(false);
+  let [openLang, setOpenLang] = useState(false);
 
   return (
     <>
