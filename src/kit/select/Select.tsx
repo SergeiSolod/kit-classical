@@ -109,29 +109,43 @@ let Select: FC<SelectProps> = ({
                         let array = [];
                         if (value) {
                           array.push(...value);
-                          if (
-                            value.find((elem) => elem[source] === item[source])
-                          ) {
-                            onChange(
-                              value.filter(
-                                (elem) => elem[source] !== item[source],
-                              ),
-                            );
+
+                          if (source) {
+                            if (
+                              value.find((elem) => elem[source] === item[source])
+                            ) {
+                              onChange(
+                                value.filter(
+                                  (elem) => elem[source] !== item[source],
+                                ),
+                              );
+                            } else {
+                              array.push(item);
+                              onChange(array);
+                            }
                           } else {
-                            array.push(item);
-                            onChange(array);
+                            if (
+                              value.find((elem) => elem === item)
+                            ) {
+                              onChange(
+                                value.filter(
+                                  (elem) => elem !== item,
+                                ),
+                              );
+                            } else {
+                              array.push(item);
+                              onChange(array);
+                            }
                           }
                         } else {
                           array.push(item);
                           onChange(array);
                         }
                       } else {
-                        // object comparison
                         if (
                           JSON.stringify(value) === JSON.stringify(item) &&
                           empty
                         ) {
-                          console.log('1', empty)
                           onChange(null);
                         } else {
                           onChange(item);

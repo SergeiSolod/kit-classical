@@ -1,4 +1,5 @@
 import "./assets/scss/style.scss";
+import "./kit/style.scss";
 import Kit from "./Kit";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 

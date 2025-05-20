@@ -14,25 +14,19 @@ let Pagination: FC<PaginationProps> = ({
   lastPage = 0,
   onAccept = () => {},
 }) => {
-  let [inputPage, setInputPage] = useState(currentPage);
-
-  let changePage = (page) => {
-    setInputPage(page);
-    onAccept(page);
-  };
 
   let handleChangePage = (e) => {
     let value = Number(e.target.value);
 
     if (isNaN(value) || value === 0) {
-      setInputPage(0);
+      onAccept(0);
     } else {
       if (value < 1) {
-        setInputPage(1);
+        onAccept(1);
       } else if (value > lastPage) {
-        setInputPage(lastPage);
+        onAccept(lastPage);
       } else {
-        setInputPage(value);
+        onAccept(value);
       }
     }
   };
@@ -40,9 +34,9 @@ let Pagination: FC<PaginationProps> = ({
   let blurPage = (e) => {
     if (Number(e.target.value) !== Number(currentPage)) {
       if (!e.target.value || e.target.value === 0) {
-        changePage(1);
+        onAccept(1);
       } else {
-        changePage(inputPage);
+        onAccept(currentPage);
       }
     } else {
       return;
@@ -51,17 +45,17 @@ let Pagination: FC<PaginationProps> = ({
 
   let changePrevPage = () => {
     if (currentPage - 1 > 1) {
-      changePage(Number(currentPage - 1));
+      onAccept(Number(currentPage - 1));
     } else {
-      changePage(1);
+      onAccept(1);
     }
   };
 
   let changeNextPage = () => {
     if (currentPage + 1 < lastPage) {
-      changePage(Number(currentPage + 1));
+      onAccept(Number(currentPage + 1));
     } else {
-      changePage(Number(lastPage));
+      onAccept(Number(lastPage));
     }
   };
 
@@ -69,9 +63,9 @@ let Pagination: FC<PaginationProps> = ({
     if (e.code === "Enter" || e.code === "NumpadEnter") {
       if (Number(e.target.value) !== Number(currentPage)) {
         if (!e.target.value || e.target.value === 0) {
-          changePage(1);
+          onAccept(1);
         } else {
-          changePage(inputPage);
+          onAccept(currentPage);
         }
       } else {
         return;
@@ -98,7 +92,7 @@ let Pagination: FC<PaginationProps> = ({
 
         <div className={styles.form}>
           <input
-            value={inputPage}
+            value={currentPage}
             onChange={handleChangePage}
             onBlur={blurPage}
             onKeyDown={handleKeyDown}

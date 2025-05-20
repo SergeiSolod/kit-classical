@@ -13,6 +13,7 @@ interface TableProps {
   noData?: string;
   colored?: boolean;
   maxValue?: number;
+  hours?: boolean;
 }
 
 let Table: FC<TableProps> = ({
@@ -25,6 +26,7 @@ let Table: FC<TableProps> = ({
   noData = "No data",
   colored = false,
   maxValue = 0,
+  hours = true
 }) => {
   let returnColor = (value: number) => {
     if (colored) {
@@ -126,7 +128,7 @@ let Table: FC<TableProps> = ({
                             >
                               {row[column.key]
                                 ? moment(row[column.key]).format(
-                                    "DD.MM.YYYY, HH:mm",
+                                    hours ? "DD.MM.YYYY, HH:mm" : "DD.MM.YYYY",
                                   )
                                 : "-"}
                             </td>

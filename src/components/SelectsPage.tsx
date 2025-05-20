@@ -59,7 +59,6 @@ let SelectsPage: FC = () => {
 
       <div className={styles.element}>
         <Select
-          source={"name"}
           value={multipleArray}
           label={"Multiple select"}
           multiple
